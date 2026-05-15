@@ -1,0 +1,21 @@
+
+{
+  "pages": [
+    "pages/index/index",
+    "pages/pref/pref"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "无负美",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+"networkTimeout": {
+  "request": 10000
+},
+  "permission": {},
+  "domStorageAccessList": ["images.unsplash.com"]
+}
+

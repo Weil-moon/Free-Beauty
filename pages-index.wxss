@@ -1,0 +1,180 @@
+
+.page {
+  min-height: 100vh;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.topbar {
+  width: 100%;
+  padding: 60rpx 48rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.type-tag {
+  font-size: 28rpx;
+  color: #999;
+  letter-spacing: 2rpx;
+}
+
+.timer-btn {
+  font-size: 32rpx;
+  color: #999;
+}
+
+/* UI 卡片 */
+.card {
+  width: 90%;
+  border-radius: 32rpx;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8rpx 40rpx rgba(0,0,0,0.06);
+  margin: 24rpx 0;
+}
+
+.ui-image {
+  width: 100%;
+  height: 900rpx;
+  display: block;
+}
+
+.note {
+  padding: 24rpx 32rpx;
+  font-size: 26rpx;
+  color: #999;
+  text-align: center;
+}
+
+/* 配色卡片 */
+.color-card {
+  padding: 60rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.palette {
+  display: flex;
+  width: 100%;
+  height: 400rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-bottom: 40rpx;
+}
+
+.swatch {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16rpx;
+}
+
+.hex {
+  font-size: 18rpx;
+  color: rgba(255,255,255,0.7);
+  writing-mode: vertical-rl;
+}
+
+.color-label {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: 8rpx;
+}
+
+/* 音乐卡片 */
+.music-card {
+  padding: 80rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600rpx;
+  justify-content: center;
+}
+
+.music-wave {
+  font-size: 48rpx;
+  margin-bottom: 48rpx;
+  opacity: 0.4;
+}
+
+.music-name {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16rpx;
+  text-align: center;
+}
+
+.music-artist {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 64rpx;
+}
+
+.play-btn {
+  font-size: 80rpx;
+}
+
+/* 上滑提示 */
+.hint {
+  font-size: 24rpx;
+  color: #ccc;
+  margin-top: auto;
+  padding: 32rpx;
+  letter-spacing: 2rpx;
+}
+
+/* 计时器弹窗 */
+.timer-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.modal-box {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: 40rpx 40rpx 0 0;
+  padding: 48rpx;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.modal-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 48rpx;
+}
+
+.modal-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 32rpx;
+}
+
+.timer-option {
+  background: #f5f5f5;
+  padding: 24rpx 40rpx;
+  border-radius: 100rpx;
+  font-size: 30rpx;
+  color: #1a1a1a;
+}

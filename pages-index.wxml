@@ -1,0 +1,64 @@
+<view class="page" bindtouchstart="touchStart" bindtouchend="touchEnd">
+
+<!-- 顶部工具栏 -->
+<view class="topbar">
+  <view class="type-tag">{{currentType === 'ui' ? '界面' : currentType === 'color' ? '配色' : '音乐'}}</view>
+  <view class="timer-btn" bindtap="openTimer">
+    <text wx:if="{{!timerRunning}}">⏱</text>
+    <text wx:else>{{timerLeft}}s</text>
+  </view>
+</view>
+
+<!-- UI 截图卡片 -->
+<view class="card" wx:if="{{currentType === 'ui' && currentItem}}">
+  <image class="ui-image" src="{{currentItem.image_url}}" mode="aspectFill"/>
+  <view class="note">{{currentItem.note}}</view>
+</view>
+
+<!-- 配色卡片 -->
+<view class="card color-card" wx:if="{{currentType === 'color' && currentItem}}">
+  <view class="palette">
+    <view
+      wx:for="{{currentItem.palette}}"
+      wx:key="index"
+      class="swatch"
+      style="background-color: {{item}}"
+    >
+      <text class="hex">{{item}}</text>
+    </view>
+  </view>
+  <view class="color-label">{{currentItem.label}}</view>
+</view>
+
+<!-- 音乐卡片 -->
+<view class="card music-card" wx:if="{{currentType === 'music' && currentItem}}">
+  <view class="music-wave">〰️〰️〰️</view>
+  <view class="music-name">{{currentItem.name}}</view>
+  <view class="music-artist">{{currentItem.artist}}</view>
+  <view class="play-btn" bindtap="toggleMusic">⏸</view>
+</view>
+
+<!-- 上滑提示 -->
+<view class="hint">上滑换一个</view>
+
+<!-- 计时器弹窗 -->
+<view class="timer-modal" wx:if="{{showTimer}}">
+  <view class="modal-bg" bindtap="closeTimer"/>
+  <view class="modal-box">
+    <view class="modal-title">等多久？</view>
+    <view class="modal-options">
+      <view
+        wx:for="{{timerOptions}}"
+        wx:key="index"
+        class="timer-option"
+        data-min="{{item}}"
+        bindtap="startTimer"
+      >
+        {{item}} 分钟
+      </view>
+    </view>
+  </view>
+</view>
+
+</view>
+

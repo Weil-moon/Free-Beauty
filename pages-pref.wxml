@@ -1,0 +1,22 @@
+
+<view class="container">
+  <view class="title">你想在等待里遇见什么？</view>
+  <view class="subtitle">可以多选</view>
+
+  <view class="options">
+    <view
+      wx:for="{{options}}"
+      wx:key="id"
+      class="option {{selected.indexOf(item.id) > -1 ? 'selected' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="toggle"
+    >
+      <text class="emoji">{{item.emoji}}</text>
+      <text class="label">{{item.label}}</text>
+      <text class="desc">{{item.desc}}</text>
+    </view>
+  </view>
+
+  <view class="btn" bindtap="confirm">开始</view>
+</view>
+
